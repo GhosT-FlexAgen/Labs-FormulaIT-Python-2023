@@ -1,7 +1,9 @@
 def get_product_index(products_list, target_products):
-    if target_products not in products_list:
-        return None
-    return products_list.index(target_products)
+    for index, item in enumerate(products_list):
+        if item == target_products:
+            return index
+
+    return None
 
 
 items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
